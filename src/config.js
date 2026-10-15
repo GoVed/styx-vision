@@ -14,16 +14,16 @@ export const config = {
   logLevel: process.env.LOG_LEVEL || 'info',
 
   // Backend: 'ollama' | 'openai_compatible'
-  backend: (process.env.VISION_BACKEND || 'ollama').toLowerCase(),
+  backend: (process.env.VISION_BACKEND || 'openai_compatible').toLowerCase(),
 
   // Ollama configuration
   ollamaBaseUrl: (process.env.OLLAMA_BASE_URL || 'http://localhost:11434').replace(/\/+$/, ''),
 
   // Vision Model ID
-  visionModel: process.env.VISION_MODEL || 'moondream',
+  visionModel: process.env.VISION_MODEL || '/models/Huihui-Qwen3.8-27B-abliterated-UD-IQ3_S.gguf',
 
   // OpenAI-compatible endpoint configuration (vLLM, llama-server, Claude/OpenAI proxy)
-  apiUrl: (process.env.VISION_API_URL || 'http://localhost:11434/v1').replace(/\/+$/, ''),
+  apiUrl: (process.env.VISION_API_URL || 'http://localhost:8080/v1').replace(/\/+$/, ''),
   apiKey: process.env.VISION_API_KEY || '',
 
   // Syndae Host Integration
